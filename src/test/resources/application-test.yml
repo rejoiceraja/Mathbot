@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mathbot_test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    open-in-view: false
+  flyway:
+    enabled: false
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+mathbot:
+  jwt:
+    secret: test-secret-key-that-is-at-least-32-chars-long!!
+    access-token-expiry-ms: 900000
+  claude:
+    api-key: test-api-key
+
+logging:
+  level:
+    com.mathbot: DEBUG
+    org.springframework.security: WARN

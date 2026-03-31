@@ -1,0 +1,32 @@
+package com.mathbot.api.exception;
+
+public enum ErrorCode {
+    // Auth
+    INVALID_CREDENTIALS,
+    INVALID_TOKEN,
+    TOKEN_EXPIRED,
+    ACCOUNT_LOCKED,
+    ACCOUNT_NOT_VERIFIED,
+    EMAIL_ALREADY_EXISTS,
+    GOOGLE_AUTH_FAILED,
+    INVALID_OAUTH_STATE,
+
+    // User
+    USER_NOT_FOUND,
+    GRADE_NOT_FOUND,
+    TOPIC_NOT_FOUND,
+
+    // Practice
+    SESSION_NOT_FOUND,
+    SESSION_ALREADY_ENDED,
+    INVALID_ANSWER,
+
+    // LLM
+    LLM_UNAVAILABLE,
+    LLM_PARSE_ERROR,
+
+    // Generic
+    VALIDATION_ERROR,
+    INTERNAL_ERROR,
+    RATE_LIMIT_EXCEEDED
+}
